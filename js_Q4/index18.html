@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>part18</title>
+</head>
+<body onunload="func2()">
+    <div>
+    <img src="https://avatars.githubusercontent.com/u/81646527?v=4" style="width: 20vw;" onclick="func1()">
+    </div>
+    <script>
+        var h = screen.height;
+        var w = screen.width;
+        var right= w-300;
+        var bottom= h-300;
+        var center1= h/2-150;
+        var center2= w/2-150;
+        
+        var Window = []
+        function func1(){
+         Window[0] =  window.open("https://github.com/Astronikk", "_blank", "height=300, width=400, top=0, left=0");
+         Window[1] =  window.open("https://github.com/Astronikk", "_blank", "height=300, width=400, top=0, left="+right);
+         Window[2] =   window.open("https://github.com/Astronikk", "_blank", "height=300, width=400, left=0, top="+bottom);
+         Window[3] =   window.open("https://github.com/Astronikk", "_blank", "height=300, width=400, top="+bottom+", left="+right);
+         Window[4] =   window.open("https://github.com/Astronikk", "_blank", "height=300, width=300, top="+center1+", left="+center2);
+        }
+        function func2() {
+            Window.close()
+        }
+
+    </script>
+    
+</body>
+</html>
