@@ -1,0 +1,91 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>part14</title>
+<script>
+var slideIndex = 0;
+
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+function showSlides(n){
+    var i;
+    var slides = document.getElementsByClassName("idk") ;
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slides[slideIndex-1].style.display = "block";
+}
+
+</script>
+</head>
+<body>
+    
+<div class="slideshow-container">
+
+   
+    <div>
+      
+      <img class="idk" src="C:/IMG Assignment/js_assignment4/apple1.png" style="width:20%; " onclick="plusSlides(1)">
+      
+    </div>
+  
+    <div>
+      
+      <img class="idk" src="C:/IMG Assignment/js_assignment4/apple2.png" style="width: 20%; " onclick="plusSlides(1)">
+      
+    </div>
+
+    <div>
+
+
+    </div>
+  
+   
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>part14</title>
+
+</head>
+<body>
+    <div id="images">
+    <img src="https://cdn.wallpapersafari.com/29/49/hN4mc2.jpg" style="width: 50vw;" onclick="change(this)">
+    </div>
+
+    <script>
+      var i=0;
+      function change(obj)
+      {
+          ++i;
+          switch(i)
+          {
+              case 1:
+                  obj.src="https://th.bing.com/th/id/R6f838ac968722a1955ff0a14c20a9521?rik=Y9oUOorNgK7p2g&riu=http%3a%2f%2f4.bp.blogspot.com%2f_NOh2IxLvc-c%2fS7d_xXwlaII%2fAAAAAAAAArc%2fuCD_1BvofmQ%2fs1600%2fpeaceful_nature_slideshow_screensaver-141117-2.jpeg&ehk=JVJU2wJI7SJll877rpy56NVmxdc9hnfgqeXIjDCj%2fpA%3d&risl=&pid=ImgRaw"
+                  break;
+              case 2:
+                  obj.src="https://i.ytimg.com/vi/KPxQvrBKXTo/maxresdefault.jpg"
+                  break;
+              case 3:
+                  obj.src="https://th.bing.com/th/id/Rdf1019312f2f5b898f4f22b8698787f8?rik=Jom7ItbXv158QA&riu=http%3a%2f%2fwww.bates.edu%2fnews%2ffiles%2f2015%2f08%2f150813_BMMC_Short_Ridge_0433.jpg&ehk=7oL4hGjLXyK1TRuujCgKJee%2bCsYM6r3BXbWrxoDjSm0%3d&risl=&pid=ImgRaw"
+                  break;
+              case 4:
+                  obj.src="https://imgscf.slidemembers.com/docs/1/1/216/starry_night_sky_-_google_slides_template_free_215886.jpg"
+                  break;
+          }
+      }
+  </script>
+</body>
+</html>

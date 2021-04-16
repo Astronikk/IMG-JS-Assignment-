@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>part10</title>
+</head>
+<body>
+    <a href="#">
+        <img src="apple1.png" id="img1" style="height: 200px" onmouseover="this.src='apple2.png'" onmouseout="this.src='apple1.png'"/>
+        </a>
+        <a href="#">
+            <img src="image1.jfif" id="img2" style="height: 200px" onmouseover="this.src='image2.jpg'" onmouseout="this.src='image1.jfif'"/>
+            </a> 
+            <a href="#">
+                <img src="image5.jpg" id="img3" style="height: 200px" onmouseover="this.src = 'image4.jpg'" onmouseout="this.src='image5.jpg'"/>
+             </a>
+             <a href="#">
+                <img src="hover1.jpg" style="height: 200px" onmouseover="change2()" onmouseout="change3()">
+             </a> 
+                  
+    <script>
+         function change(obj,location)
+        {
+            obj.src= location
+        }
+            var a=[]
+            a[0]=document.getElementById('img1')
+            a[1]=document.getElementById('img2')
+            a[2]=document.getElementById('img3')
+        function change2()
+        {
+           for(let i=0;i<3;i++)
+           a[i].src="hover1.jpg"
+        }
+        function change3()
+        {
+            a[0].src="apple1.png"
+            a[1].src="image1.jfif"
+            a[2].src="image5.jpg"
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a type="button" onclick="fn1()"><b><i>browser</i></b></a>
+    <br>
+    <a type="button" onclick="fn2()"><b><i>height</i></b></a>
+    <br>
+    <a type="button" onclick="fn3()"><b><i>width</i></b></a>
+    <br>
+    <a type="button" onclick="fn4()"><b><i>LastModified</i></b></a>
+    
+    <script>
+        function fn1(){
+            document.write(navigator.appName);
+        }
+        function fn2(){
+            document.write(window.screen.availHeight);
+        }
+        function fn3(){
+            document.write(window.screen.availWidth);
+        }
+        function fn4(){
+            document.write(document.lastModified); 
+        }
+        
+    </script>
+</body>
+</html>

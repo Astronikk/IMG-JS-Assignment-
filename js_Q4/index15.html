@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>part15</title>
+    <style>
+        #img{
+            height:50vw;
+        }
+        #images{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .prev, .next{
+            padding: 10px;
+            border-radius: 5px;
+            background-color: gray;
+        }
+    </style>
+    
+</head>
+<body>
+    <div id="images">
+
+    <a class="prev" onclick="move(0)">&#10094;</a>
+
+    <img src="https://cdn.wallpapersafari.com/29/49/hN4mc2.jpg" id="img">
+   
+    <a class="next" onclick="move(1)">&#10095;</a>
+
+    <script>
+        var i=0;
+        function move(check)
+        {
+            var a=document.getElementsByClassName('prev')
+            var b=document.getElementsByClassName('next')
+            if(check==0)
+            {
+               if(i>=0)
+                --i
+            }
+            else{
+                if(i<4)
+                ++i
+            }
+            change()
+        }
+        function backward(b)
+        {
+            if(i==0)
+            b.src ="https://logodix.com/logo/428903.jpg"
+            else{
+                --i;
+                change()
+            }
+        }
+            function change()
+            {
+                var obj=document.getElementById('img')
+            switch(i)
+            {
+                case 1:
+                    obj.src="https://cdn.wallpapersafari.com/29/49/hN4mc2.jpg"
+                    break;
+                case 2:
+                    obj.src="https://i.ytimg.com/vi/KPxQvrBKXTo/maxresdefault.jpg"
+                    break;
+                case 3:
+                    obj.src="https://th.bing.com/th/id/Rdf1019312f2f5b898f4f22b8698787f8?rik=Jom7ItbXv158QA&riu=http%3a%2f%2fwww.bates.edu%2fnews%2ffiles%2f2015%2f08%2f150813_BMMC_Short_Ridge_0433.jpg&ehk=7oL4hGjLXyK1TRuujCgKJee%2bCsYM6r3BXbWrxoDjSm0%3d&risl=&pid=ImgRaw"
+                    break;
+                case 4:
+                    obj.src="https://imgscf.slidemembers.com/docs/1/1/216/starry_night_sky_-_google_slides_template_free_215886.jpg"
+                    break;
+            }
+        }
+    </script>
+</div>
+</body>
+</html>

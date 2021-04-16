@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>part7</title>
+</head>
+<body>
+    <a>ONCE upon a time there was a <a id="profession" style="color: black;"></a> named <a id="name" style="color: black;"></a>  who wanted to marry a princess named <a id="name2" style="color: black;"></a>;He travelled all over the <a id="city" style="color: black;"></a>(native place) to find her, but nowhere could he get what he wanted. He only knew the favourite color of her that was <a id="color" style="color: black;"></a>  
+    </a>
+
+    <script>
+         var user = prompt("Enter your name:", "");
+         var Word1 = prompt("Profession?", "");
+         var Word2 = prompt("Your Crush? :>", "");
+         var Word3 = prompt("Where she lives?", "");
+         var color = prompt("color:", "");
+         if (Word1 != null) {
+         document.getElementById("profession").innerText =
+         Word1;
+          document.getElementById("profession").style.color = color;
+        }
+        if (user != null) {
+         document.getElementById("name").innerText =
+          user + "!";
+          document.getElementById("name").style.color = color;
+        }
+        if (Word2 != null) {
+         document.getElementById("name2").innerText =
+          Word2;
+          document.getElementById("name2").style.color = color;
+        }
+        if (Word3 != null) {
+         document.getElementById("city").innerText =
+          Word3;
+          document.getElementById("city").style.color = color;
+        }
+        if (color != null) {
+         document.getElementById("color").innerText =
+          color;
+          document.getElementById("color").style.color = color;
+        }
+    </script>
+</body>
+</html>
