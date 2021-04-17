@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>part16</title>
+    <style>
+        .circle-container {
+        position: relative;
+        width: 24em;
+        height: 24em;
+        padding: 2.8em;
+        border-radius: 50%;
+        margin: 1.75em auto 0;
+    }
+    .circle-container a {
+        display: block;
+        position: absolute;
+        top: 50%; left: 50%;
+        width: 4em; height: 4em;
+        margin: -2em;
+    }
+    .circle-container img { display: block; width: 100%; }
+    .deg0 { transform: translate(12em); } /* 12em = half the width of the wrapper */
+    .deg60 { transform: rotate(60deg) translate(12em) rotate(-60deg); }
+    .deg120 { transform: rotate(120deg) translate(12em) rotate(-120deg); }
+    .deg180 { transform: translate(-12em); }
+    .deg240 { transform: rotate(240deg) translate(12em) rotate(-240deg); }
+    .deg300 { transform: rotate(300deg) translate(12em) rotate(-300deg); }
+    #m2,#m3,#m4,#m5,#m6,#m7{
+        display: none;
+    }
+
+    </style>
+</head>
+<body>
+    
+     <div class='circle-container'>
+        <a id="m1" class='center' onmouseout="func1()" onmouseover="stopA()"><img src='marble1.jpg'></a>
+        <a id="m2" class='deg0' onmouseout="func1()" onmouseover="stopA()"><img src='marble1.jpg'></a>
+        <a id="m3" class='deg60' onmouseout="func1()" onmouseover="stopA()"><img src='marble1.jpg'></a>
+        <a id="m4" class='deg120' onmouseout="func1()" onmouseover="stopA()"><img src='marble1.jpg'></a>
+        <a id="m5" class='deg180' onmouseout="func1()" onmouseover="stopA()"><img src='marble1.jpg'></a>
+        <a id="m6" class='deg240' onmouseout="func1()" onmouseover="stopA()"><img src='marble1.jpg'></a>
+        <a id="m7" class='deg300' onmouseout="func1()" onmouseover="stopA()"><img src='marble1.jpg'></a>
+    </div>
+
+    <script>
+        var imgn = 0;
+        var imgA = ["m2", "m3", "m4", "m5", "m6" , "m7"];
+        var counter;
+
+        function func1() {
+            counter = setInterval(animation, 1000);
+        }
+
+        function animation() {
+            imgn = imgn + 1;
+            if (imgn == 7) {
+                imgn = 1;
+            }
+            if (imgn - 1 > 1) {
+                document.getElementById(imgA[imgn-2]).style.display = "block";
+                document.getElementById(imgA[imgn-3]).style.display = "none";
+            }
+            if (imgn == 1) {
+                document.getElementById(imgA[5]).style.display = "block";
+                document.getElementById(imgA[4]).style.display = "none";
+            }
+            if (imgn == 2) {
+                document.getElementById(imgA[0]).style.display = "block";
+                document.getElementById(imgA[5]).style.display = "none";
+            }
+        }
+
+        function stopA() {
+            clearInterval(counter);
+        }
+
+    </script>
+    
+</body>
+</html>
