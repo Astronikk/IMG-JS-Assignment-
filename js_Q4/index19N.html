@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>part19</title>
+</head>
+<body onload="myFunc()">
+        <a id="display"></a>
+        <script>
+            username = "username";
+            function myFunc() {
+            if(document.cookie)
+            {
+                index = document.cookie.indexOf(username);
+            }
+            else
+            {
+                index = -1;
+            }
+            var expiry = new Date();
+            fun(expiry)
+            expiry.setTime(expiry.getTime()+(365*24*60*60*1000));
+            if (index == -1)
+            {document.cookie=username+"=1; expires=" + expiry;}
+            else
+            {
+            countbegin = (document.cookie.indexOf("=", index) + 1);
+            countend = document.cookie.indexOf(";", index);
+            if (countend == -1) {
+            countend = document.cookie.length;
+            }
+            count = eval(document.cookie.substring(countbegin, countend)) + 1;
+    
+            document.cookie=username+"="+count+"; expires=" + expiry;
+            }
+            }
+            function gettimes() {
+                if(document.cookie) {
+                index = document.cookie.indexOf(username);
+                if (index != -1) {
+                countbegin = (document.cookie.indexOf("=", index) + 1);
+                countend = document.cookie.indexOf(";", index);
+                if (countend == -1) {
+                countend = document.cookie.length;
+                }
+                count = document.cookie.substring(countbegin, countend);
+                return count;
+        }
+        }
+        return 0;
+        }   
+        function fun(time){
+        if(gettimes()==0)
+        document.getElementById('display').innerHTML="You have never visited before!"
+        else 
+        document.getElementById('display').innerHTML="You have visited "+gettimes()+" time and You lasted visited on "+time+""
+        }
+        </script>
+</body>
+
