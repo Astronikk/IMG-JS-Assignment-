@@ -1,5 +1,5 @@
 const inp_field = {
-    name: /^([A-Za-z\.]+(\s[A-Za-zO'\.]+(\s[A-Za-zO'\.]+)?)?)$/i,
+    name: /^([A-Za-z\.]+(\s[A-Za-zO'\.]+(\s[A-Za-zO'\.]+(\s[A-Za-zO'\.]+)?)?)?)$/i,
     city: /^([A-Za-z\.-]+(\s[A-Za-z\.-]+(\s[A-Za-z.]+)?)?)$/i,
     email: /[a-z\d_\-\.]+@[A-Za-z]+\.[A-Za-z]{2,6}((\.[A-Za-z]{2,6})+)?/i,
     password: /^[#\w@_-]{8,20}$/,
